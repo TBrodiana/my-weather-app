@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> My Weather App</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!-- First block starts here -->
+            <div class="firstBlock">
+                <div class="firstBlockBg">
+                    <div class="header">
+                        <div class="cityName">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h1 id="city"></h1>
+                        </div>
+                    <div class="tempLowHight">
+                        <i class="fa-solid fa-arrow-down-long"></i><p class="lowestTemp"></p>
+                        <i class="fa-solid fa-arrow-up-long"></i><p class="highestTemp"></p>
+                    </div>
+                    </div>
+                    <div class="firstBoxBody">
+                        <div class="today-info-container">
+                                <div class="info-row">
+                                    <div class="weekDay" id="weekday"></div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="dateToday" id="dateToday"></div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="title">Wind: 
+                                        <div class="value"><span id="wind">  </span>km/h</div>
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="title"><i class="fa-solid fa-droplet"></i>
+                                        <div class="value"><span id="humidity">  </span>%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="weather-container">
+                                    <img src="img/01n.png" alt="sun" id="weatherImg">
+                                    <div class="weatherTempRow">
+                                        <h1 class="weatherTemp"></h1>
+                                        <div class="units">
+                                            <span id="celsiusBtn" class="selected">C</span>
+                                            <span id="fahrenheitBtn">F</span>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="weather-desc"></div>
+                </div>
+            </div>
+            <!-- First block ends here -->
+            
+            <!-- Week container for daily forecast starts here-->
+            <div class="week-container">
+                <div class="week-containerBg">
+                    <ul class="week-list" id="forecast">
+        
+                    </ul>
+                </div>
+            </div>
+            <!-- Week container ends here   -->
+
+            <!--  Search container starts here-->
+            <div class="search-container">
+                <div class="search-containerBg">
+                    <div class="text-field">
+                        <input type="search" name="search" id="searchInput" placeholder="Search your city" class="text-field-input">
+                        <span class="text-field-icon" id="searchBtn">
+                            <img src="img/search.png" alt="Search icon">
+                        </span>
+                    </div>
+                    <button class="locationBtn">
+                        <img src="img/location.png" alt="location" width="16">
+                        <span>Current location</span>
+                    </button>
+                </div>
+            </div>
+            <!--  Search container ends here-->
+        </div>
+        <footer>
+            <p>Made with ❤ by Tetiana Brodiana</p>
+        </footer>
+    
+    </div>
+
+<script src="https://kit.fontawesome.com/dbeafa0042.js" crossorigin="anonymous"></script>
+<script src="src/index.js"></script>
+</body>
+</html>
